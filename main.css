@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width:100%;
+}
+
+.container section{
+    display:flex;
+    justify-content: center;
+    padding:50px 0;
+}
+.container section.introduction{
+    background-color: #F6F6F6;
+}
+.container section .block{
+    width:534px;
+    padding:50px 0;
+    padding:20px 0;
+}
+
+/* ***** BLOCKS ***** */
+.container section .block h1,
+.container section .block h2{
+    font-family: Rift;
+    color: #000000;
+    font-size: 70px;
+    line-height:70px;
+    margin-top:12px;
+}
+.container section .block h3{
+    font-family: Lato;
+    color: #000000;
+    font-size: 20px;
+}
+.container section .block h4{
+    font-family: Lato;
+    color: #485A65;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top:-20px;
+}
+.container section .block p{
+    font-size: 16px;
+    color: #000000;
+    font-family: Lato;
+    line-height: 26px;
+    margin-top: 17px;
+}
+.container section .block figure{
+    text-align: center;
+}
+.container section .block #imgPhone{
+    max-width:100%;
+}
+.container section .block ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.container section .block ul li{
+    display: flex;
+    justify-content: space-between;
+    width:48%;
+    margin-top:50px;
+}
+.container section .block ul li img{
+    width:80px;
+    height:80px;
+    margin-right:13px;
+}
+.container section .block ul li p{
+    font-family: Lato;
+    font-size:13px;
+    color:#000000;
+    line-height: 20px;
+    margin-top: 12px;
+}
+
+/* ****** FORM ***** */
+.container section .block form{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top:-20px;
+}
+.container section .block form .columns-1{
+    width:100%;
+}
+.container section .block form .columns-2{
+    width:48%;
+}
+.container section .block form .input-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:24px;
+}
+.container section .block form .input-container input,
+.container section .block form .input-container select{
+    font-family: Lato;
+    color: #000000;
+    font-size: 15px;
+    padding:14px 16px;
+    background-color: #0913210F;
+    border:none;
+    line-height: 23px;
+    height:48px;
+}
+.container section .block form .input-container input::placeholder{
+    color: #000000;
+}
+.container section .block form .input-container input:-ms-input-placeholder{
+    color: #000000;
+}
+.container section .block form .input-container input::-ms-input-placeholder{
+    color: #000000;   
+
+}
+.container section .block form .checkbox-container{
+    position:relative;
+    margin-bottom:24px;
+}
+.container section .block form .checkbox-container input[type=checkbox]{
+    position:relative;
+    width:24px;
+    height: 24px;
+    z-index:0;
+    visibility: hidden;
+    cursor:pointer;
+    margin-right:12px;
+    vertical-align: middle;
+}
+.container section .block form .checkbox-container input[type=checkbox]:after{
+    content:'';
+    position:absolute;
+    border:none;
+    background: #09132115;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 1;
+    visibility: visible;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container section .block form .checkbox-container input[type=checkbox]:checked:after{
+    content:'✔';
+}
+.container section .block form .checkbox-container label,
+.container section .block form .checkbox-container label a{
+    font-family: Lato;
+    font-size: 13px;
+    line-height: 19px;
+    color:#000000;
+    text-decoration:none;
+}
+.container section .block form .button-container button{
+    border:none;
+    border-radius:25px;
+    background-color: #6ABF46;
+    color:#162023;
+    font-family: Lato;
+    font-size: 14px;
+    padding:16px;
+    cursor: pointer;
+    width:270px;
+    text-align: center;
+    font-weight: bold;
+}
+@media screen and (max-width: 960px) {
+    .container{
+        padding-bottom:50px;
+    }
+    .container section{
+        flex-direction: column;
+        padding:0 15px;
+    }
+    .container section .block{
+        width:100%;
+        padding:10px 0;
+    }
+    .container section .block ul{
+        flex-direction:column;
+    }
+    .container section .block ul li{
+        width:100%;
+        justify-content: flex-start;
+    }
+    .container section .block ul li p{
+        font-size: 16px;
+    }
+    .container section .block #imgPhone{
+        margin-top:30px;
+    }
+    .container section .block form,
+    .container section .block h4{
+        margin-top:20px;
+    }
+    .container section .block form .columns-2{
+        width:100%;
+    }
+    .container section .block form .button-container button{
+        width:155px;
+    }
+}
